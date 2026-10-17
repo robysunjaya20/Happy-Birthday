@@ -962,19 +962,112 @@ body {
         right: -65px;
     }
 
-    #btn__letter {
+    .left .btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+
+        width: 100%;
+        max-width: 100%;
         margin-top: 15px;
-        width: 200px;
     }
 
+    #btn__letter,
     #FromRexon {
-        margin-top: 10px;
-        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 1 auto;
+        min-width: 0;
+        width: auto;
+        margin: 0;
+        padding: 7px 10px;
+
+        white-space: nowrap;
+    }
+
+    #btn__letter .mail,
+    #FromRexon a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        white-space: nowrap;
+        font-size: clamp(11px, 3.2vw, 14px);
+    }
+
+    #btn__letter svg,
+    #FromRexon svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
     }
     .date__of__birth {
-        width: fit-content;
-        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        width: 280px;
+        max-width: calc(100vw - 32px);
+        height: 46px;
+
+        padding: 4px 8px;
+        margin: 20px auto 0;
+
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+
+        animation: dateOfBirthMobile 5s 9s forwards;
+    }
+
+    .date__of__birth span {
+        flex: 0 1 auto;
+        min-width: 0;
+        margin: 0;
+        font-size: clamp(13px, 3.8vw, 16px);
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .date__of__birth svg {
+        flex-shrink: 0;
+        width: 17px;
+        height: 17px;
+    }
+
+    @keyframes dateOfBirthMobile {
+        0%, 20% {
+            width: 0;
+            height: 0;
+            transform: translateY(-100px);
+            opacity: 0;
+            visibility: hidden;
         }
+
+        45% {
+            width: 280px;
+            max-width: calc(100vw - 32px);
+            height: 0;
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        50%, 100% {
+            width: 280px;
+            max-width: calc(100vw - 32px);
+            height: 46px;
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 
     .btn {
         display: flex;
