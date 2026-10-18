@@ -369,9 +369,6 @@ body {
     font-size: 1.7rem;
 }
 
-/* =========================
-   PHOTO
-========================= */
 .right .box__account {
     position: relative;
     transform: translateY(700px);
@@ -400,9 +397,6 @@ body {
     object-fit: cover;
 }
 
-/* =========================
-   CIRCULAR BIRTHDAY / MUSIC
-========================= */
 .cricle {
     position: absolute;
     top: 20px;
@@ -479,9 +473,6 @@ body {
     }
 }
 
-/* =========================
-   BALLOONS
-========================= */
 .right .balloon_one {
     position: absolute;
     top: -70px;
@@ -631,9 +622,6 @@ body {
     animation: scaleCricle 3s 15s forwards ease-in-out;
 }
 
-/* =========================
-   LETTER MODAL
-========================= */
 .box__letter {
     position: fixed;
     top: 0;
@@ -806,9 +794,6 @@ body {
     animation: opacityHeart 1s 1s forwards;
 }
 
-/* =========================
-   FOOTER
-========================= */
 #copy {
     position: fixed;
     bottom: 12px;
@@ -829,9 +814,6 @@ body {
     cursor: pointer;
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media screen and (max-width: 658px) {
     .flag__birthday .flag__left {
         transform: rotate(-10deg) translate(-119px, 3px);
@@ -866,14 +848,53 @@ body {
         letter-spacing: 8px;
     }
 
-    .title .hat {
-        position: absolute;
-        top: -51px !important;
-        right: -98px;
-        transform: rotate(-40deg);
-        z-index: -1;
-        animation: topHat 4s 7s forwards ease;
-    }
+
+.title .hat {
+    position: absolute;
+    width: 95px;
+    height: auto;
+
+    top: -20px !important;
+    right: 2px;
+
+    transform: rotate(-25deg);
+    transform-origin: center;
+    z-index: -1;
+    animation: topHat 3s 7s forwards ease-out;
+    
+}
+
+.title .hat img {
+    display: block;
+    width: 100% !important;
+    max-width: 65px;
+    opacity: 0;
+    transform-origin: center;
+    animation: mobileHat 3s 7s forwards ease-out;
+    height: auto;
+}   
+    @keyframes mobileHat {
+        0%, 10% {
+            top: -20px;
+            transform: rotate(0deg);
+            opacity: 0;
+        }
+        20%, 30% {
+            top: -20px;
+            visibility: visible;
+            transform-origin: left;
+            opacity: 1;
+            transform: rotate(-40deg);
+        }
+    
+        35%, 100% {
+            top: -20px;
+            visibility: visible;
+            opacity: 1;
+            transform: rotate(0deg);
+        }  
+}
+
 
     /* DATE MOBILE */
     .content .left .date__of__birth {
