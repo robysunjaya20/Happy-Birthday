@@ -205,7 +205,7 @@ const Home = () => {
                             </div>
                             <div className="name">
                                 <i className="fa-solid fa-heart"></i>
-                                <span>Dear Salma Sayang</span>
+                                <span>Salma Sayang❤️</span>
                                 <i className="fa-solid fa-heart"></i>
                             </div>
                             <div className="balloon_one">
