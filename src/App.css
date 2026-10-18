@@ -129,12 +129,31 @@ body {
     width: 60%;
 }
 
-/* =========================
-   BUTTONS
-========================= */
 .left .btn {
     transform: scale(0);
-    animation: scaleCricle 2s 16s forwards ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    animation: showBirthdayButtons 1.5s 14s forwards ease-in-out;
+}
+
+@keyframes showBirthdayButtons {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    70% {
+        transform: scale(1.08);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 #btn__letter,
