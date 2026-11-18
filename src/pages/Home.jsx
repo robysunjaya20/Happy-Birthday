@@ -64,7 +64,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        let datetxt = "19 November 2026";
+        let datetxt = "18 November 2026";
         let charArrDate = datetxt.split('');
         let currentIndex = 0;
         let date__of__birth = document.querySelector(".date__of__birth span");
